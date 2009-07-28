@@ -4,7 +4,7 @@ package Net::OBEX::FTP;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Carp;
 use Net::OBEX;
@@ -470,7 +470,7 @@ L<Net::OBEX>, L<XML::OBEXFTP::FolderListing>
 =head1 AUTHOR
 
 Zoffix Znet, C<< <zoffix at cpan.org> >>
-(L<http://zoffix.com>, L<http://haslayout.net>)
+(L<http://zoffix.com>, L<http://haslayout.net>, L<http://zofdesign.com/>)
 
 =head1 BUGS
 
