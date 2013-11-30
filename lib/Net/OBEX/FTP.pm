@@ -1,10 +1,9 @@
-
 package Net::OBEX::FTP;
 
 use strict;
 use warnings;
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 use Carp;
 use Net::OBEX;
@@ -159,7 +158,7 @@ sub _is_success {
         = @{ $response_ref->{ $type }{info} }{
             qw( response_code  response_code_meaning )
         };
-        
+
         $self->response( $response_ref );
         $self->error( "Failed to connect: ($code) $meaning" );
         return 0;
@@ -182,6 +181,7 @@ sub close {
 
 __END__
 
+=encoding utf8
 
 =head1 NAME
 

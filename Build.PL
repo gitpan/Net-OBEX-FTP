@@ -15,9 +15,14 @@ my $builder = Module::Build->new(
         'Net::OBEX'                   => 0.002,
         'XML::OBEXFTP::FolderListing' => 0.002,
         'Class::Data::Accessor'       => 0.04001,
+        'perl' => '5.006',
     },
+
     add_to_cleanup      => [ 'Net-OBEX-FTP-*' ],
     create_makefile_pl => 'traditional',
 );
+if ( $ENV{RELEASE_TESTING} ) {
+    system('pod2text lib/Net/OBEX/FTP.pm > README');
+}
 
 $builder->create_build_script();

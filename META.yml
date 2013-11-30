@@ -1,26 +1,28 @@
 ---
-name: Net-OBEX-FTP
-version: 0.002
+abstract: 'implemenation of OBEX File Transfer Profile'
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
-abstract: implemenation of OBEX File Transfer Profile
-license: perl
-resources:
-  license: http://dev.perl.org/licenses/
 build_requires:
   Test::More: 0
+configure_requires:
+  Module::Build: 0.40
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132830'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Net-OBEX-FTP
+provides:
+  Net::OBEX::FTP:
+    file: lib/Net/OBEX/FTP.pm
+    version: 0.003
 requires:
   Carp: 1.04
   Class::Data::Accessor: 0.04001
   Net::OBEX: 0.002
   XML::OBEXFTP::FolderListing: 0.002
-configure_requires:
-  Module::Build: 0.34
-provides:
-  Net::OBEX::FTP:
-    file: lib/Net/OBEX/FTP.pm
-    version: 0.002
-generated_by: Module::Build version 0.34
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  perl: 5.006
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.003
